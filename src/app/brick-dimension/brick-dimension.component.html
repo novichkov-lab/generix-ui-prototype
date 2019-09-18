@@ -1,0 +1,44 @@
+<div class="form-horizontal panel panel-default">
+  <div class="panel-heading" style="padding-top:5px; padding-bottom:5px">
+    <div class="row">
+      <div class="col-sm-10">
+        Dimension {{brickDimension.index + 1}}
+      </div>
+      <div class="col-sm-2 row-delete">
+        <button class="btn btn-delete" style="padding: 0px;" (click)="deleteDimension()">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel-body panel-dimension">
+    <div clas="form-group ">
+      <label class="control-label col-sm-2">Name</label>
+      <div class="input-group" style="width:80%">      
+          <app-select-search [term]='brickDimension.type'  [searchMethod]='"searchOntAll"'></app-select-search>
+      </div>
+
+
+      <!-- <div class="input-group">
+        <input type="text" [(ngModel)]="brickDimension.type" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">.</button>
+        </span>
+      </div> -->
+    </div>
+    <br>
+
+    <div *ngFor="let dimVariable of brickDimension.variables">
+      <app-brick-dimension-var [dimensionVariable]="dimVariable"></app-brick-dimension-var>
+    </div>
+    <div class="row-add-dimension-var">
+      <button (click)="addVariable()" class="btn btn-default">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        Add variable</button>
+    </div>
+
+
+  </div>
+</div>

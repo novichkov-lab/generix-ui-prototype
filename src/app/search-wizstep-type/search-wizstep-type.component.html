@@ -1,0 +1,14 @@
+<div class="form-horizontal panel" style="margin-top:30px">
+    <div class="header">
+      <h3>What would you like to search for?</h3>
+    </div>
+    <div *ngIf="loaded">
+        <select2 
+        [options]="dataTypes"
+        [(ngModel)]="searchBuilder.dataType" 
+        (onSelect)="onDataTypeSelect($event)">
+      </select2>  
+    </div>
+</div>
+<br>
+  

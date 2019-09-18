@@ -1,0 +1,47 @@
+<div class="form-horizontal panel panel-success">
+
+  <div class="panel-heading" style="padding-top:5px; padding-bottom:5px">
+    <div class="row">
+      <div class="col-sm-10">
+        Property
+      </div>
+      <div class="col-sm-2 row-delete">
+        <button class="btn btn-delete" style="padding: 0px;" (click)="deleteVariable()">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel-body panel-dimension-var">
+    <div clas="form-group ">
+      <label class="control-label col-sm-4">Name</label>
+      <div class="input-group" style="width:65%">      
+        <app-select-search [term]='dimensionVariable.type'  [searchMethod]='"searchOntAll"'></app-select-search>
+      </div>
+    </div>
+
+    <br>
+
+    <div clas="form-group ">
+      <label class="control-label col-sm-4">Units of measurement</label>
+      <div class="input-group" style="width:65%">      
+        <app-select-search [term]='dimensionVariable.units'  [searchMethod]='"searchOntUnits"'></app-select-search>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- <div clas="form-group ">
+      <label class="control-label col-sm-4">Scalar type</label>
+      <div class="input-group">
+        <input type="text" [(ngModel)]="dimensionVariable.scalarType" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">.</button>
+        </span>
+      </div>
+    </div> -->
+
+  </div>
+</div>

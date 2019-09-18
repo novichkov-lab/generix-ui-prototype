@@ -1,0 +1,59 @@
+<div class="container">
+
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style="color:darkgreen" href="#"><b>ENIGMA Data Clearinghouse</b></a>
+        </div>
+    
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li [class]="activeClassHome()"><a href="#" (click)="onHomeClick()" >Home</a></li>
+            <li [class]="activeClassUpload()" ><a href="#" (click)="onUploadClick()">Upload</a></li>
+            <li [class]="activeClassSearch()" ><a href="#" (click)="onSearchClick()">Search</a></li>
+            <li [class]="activeClassDashboard()" ><a href="#" (click)="onDashboardClick()">Dashboard</a></li>
+            <li [class]="activeClassPlot()" ><a href="#" (click)="onPlotClick()">Plot</a></li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <form class="navbar-form navbar-left">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Quick Search">
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                </ul>
+        </div>
+      </div>
+  </nav>
+
+
+
+  <div *ngIf="isActiveHome()">
+    <app-home></app-home>
+  </div>
+    
+  <div *ngIf="isActiveUpload()">
+    <app-uploader-wizard></app-uploader-wizard>
+  </div>
+
+  <div *ngIf="isActiveSearch()">
+      <app-search-wizard></app-search-wizard>
+  </div>
+
+  <div *ngIf="isActiveDashboard()">
+      <app-dashboard></app-dashboard>
+  </div>
+
+  <div *ngIf="isActivePlot()">
+    <app-plot-wizard></app-plot-wizard>
+  </div>
+
+ 
+</div>

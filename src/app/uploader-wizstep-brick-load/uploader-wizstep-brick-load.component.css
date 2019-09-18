@@ -1,0 +1,261 @@
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+   
+  .drag-drop-panel {
+    margin-bottom: 15px;
+    margin-top: 9px;
+  }
+  
+  .drop-zone {
+    border: 2px dashed #cccccc;
+    border-radius: 4px;
+    padding: 11px;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+  }
+  
+  .drop-zone-target {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+  
+  .drop-zone-text {
+    color: #ccccd3;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+  }
+  
+  
+  .upload-content-container .filter-container {
+      border-bottom: 1px solid #848484;
+  }
+  
+  .upload-content-container .filter-container .row {
+      margin-right: 0px;
+      margin-left: 0px;	
+  }
+  
+  .upload-content-container .filter-container .filter-container-row{
+      background-color: #ECECEC;
+  }
+  
+  .upload-content-container .filter-container .filter-container-row-top {
+      padding-top: 20px;
+      padding-bottom: 20px;	
+  }
+  
+  .upload-content-container .drag-drop-panel {
+  
+  }
+  
+  .upload-content-container .upload-drop-zone {
+  
+  }
+  
+  .upload-content-container .drop-zone-target {
+      position: relative;
+  }
+  
+  .upload-content-container .drag-drop-image-container {
+      display: inline-block;
+      margin-left: 25px;
+      margin-right: 25px;
+  }
+  
+  .upload-content-container .drag-drop-title-image a {
+      font-size: 5rem;
+  }
+  
+  .glyphicon-blue {
+    color: #337ab7;
+  }
+  .upload-content-container .drag-drop-title-image a span {
+      color: #337ab7;
+  }
+  
+  .upload-content-container .drag-drop-title {
+      font-size: 2rem;
+  }
+  
+  .upload-content-container .drag-drop-file-type-image a {
+      font-size: 5rem;
+  }
+  
+  .upload-content-container .drag-drop-file-type-image span {
+      position: relative;
+      color: #00499b;
+  }
+  
+  #upload-missingattachments-container.upload-content-container .drag-drop-file-type-image span span.fa-lock{
+      position: absolute;
+      display: inline-block;
+      width: 120%;
+      top: -10px;
+      font-size: 4.1rem;
+      left: 10px;
+      background: transparent;
+      color: #000000;
+  }
+  
+  
+  #upload-missingattachments-container.upload-content-container .drag-drop-file-type-image span span.fa-lock span span {
+      position: absolute;
+      display: inline-block;
+      width: 30%;
+      top: -9px;
+      font-size: 1.2rem;
+      left: 8px;
+      color: #fff;
+  }
+  
+  .upload-content-container .drag-drop-file-type-image span span {
+      position: absolute;
+      top: 30px;
+      font-size: 1.5rem;
+      left: 7px;
+      background-color: #fff;
+  }
+  
+  .upload-content-container .drag-drop-file-type-image span span.file-type {
+      left: 8px;
+  }
+  
+  .drag-drop-content .drag-drop-footer {
+      font-size: 1.2rem;
+  }
+  
+  #upload-missingattachments-container.upload-content-container .drag-drop-file-type-image {
+      margin-bottom: 0px;
+  }
+  
+  .upload-content-container .drag-drop-file-type-image {
+      margin-top: 10px;
+      margin-bottom: 20px;
+  }
+  
+  .drag-drop-upload-file-input-label {
+      font-size: 1.7rem;
+      font-weight: 400;
+      text-decoration: underline;
+      color: #0096d6;
+      cursor: pointer;
+  }
+  
+  .drag-drop-upload-file-input-label:hover {
+      color: #00b3ff;
+  }
+  
+  
+  .filter-container-row-bottom {
+      margin-top: 3px;
+  }
+  
+  .upload-button-row {
+      margin-right: 15px;
+      margin-left: 15px; 
+  }
+  
+  .upload-button-row.button-row .btn {
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  
+  .upload-content-container .result-container {
+      margin-top: 20px;
+      margin-bottom: 30px;
+  }
+  
+  .upload-button-row.button-row .btn-add-file-to-upload {
+      margin-right: 20px;
+      padding-top: 10px;
+  }
+  /***********************************************Upload Bill Batches Table******************************/
+  
+  .upload-table-header {
+      padding: 5px;
+      text-align: center;
+      background-color: gray;
+      color: #fff;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+  }
+  
+  .upload-table-header.upload-table-header-last-child {
+      border-right: none;
+  }
+  
+  .upload-table-td {
+      padding: 5px;
+      text-align: center;
+  }
+  
+  .upload-table-body-row .file-name-upload-table-td a {
+      font-size: 2.5rem;
+  } 
+  
+  .upload-table-text-cell {
+      padding-top: 3px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  
+  form[data-status='file-error'] .upload-table-file-uploading,
+  form[data-status='preupload'] .upload-table-file-uploading,
+  form[data-status='upload-success'] .upload-table-file-uploading,
+  form[data-status='upload-queued'] .upload-table-file-uploading {
+      display: none;
+  }
+  
+  form[data-status='uploading'] .upload-table-file-icon {
+      display: none;
+  }
+  
+  
+  form[data-status='uploading'] .post-upload-buttons,
+  form[data-status='file-error'] .post-upload-buttons,
+  form[data-status='preupload'] .post-upload-buttons,
+  form[data-status='upload-queued'] .post-upload-buttons {
+      display: none;
+  }
+  
+  form[data-status='upload-success'] .pre-upload-buttons {
+      display: none;
+  }
+  
+  form.upload-form,
+  form.upload-form-template {
+      margin-bottom: 0px;
+      border-bottom: 1px solid #ddd;
+  }
+  
+  form.upload-form .btn.btn-primary,
+  form.upload-form-template .btn.btn-primary {
+      line-height: 1.42857143 !important;
+  }
+  
+  form[data-status='upload-success'] .file-name-upload-table-td a {
+      color: rgb(0, 128, 0);
+  }
+  
+  form[data-status='file-error'] .file-progress-status,
+  form[data-status='file-error'] .file-name-upload-table-td a {
+      color: #cc0000;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
