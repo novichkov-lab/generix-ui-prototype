@@ -1,0 +1,14 @@
+<app-uploader-wizstep-brick-type *ngIf="step == 1" [brick]="brick"></app-uploader-wizstep-brick-type>
+<app-uploader-wizstep-brick-props *ngIf="step == 2" [brick]="brick"></app-uploader-wizstep-brick-props>
+<app-uploader-wizstep-brick-dims *ngIf="step == 3" [brick]="brick"></app-uploader-wizstep-brick-dims>
+<app-uploader-wizstep-brick-load *ngIf="step == 4" [brick]="brick"></app-uploader-wizstep-brick-load>
+<app-uploader-wizstep-brick-validate *ngIf="step == 5" [brick]="brick"></app-uploader-wizstep-brick-validate>
+<app-uploader-wizstep-brick-map *ngIf="step == 6" [brick]="brick"></app-uploader-wizstep-brick-map>
+<app-uploader-wizstep-brick-create *ngIf="step == 7" [brick]="brick"></app-uploader-wizstep-brick-create>
+<app-uploader-wizstep-done *ngIf="step == 8" [brick]="brick"></app-uploader-wizstep-done>
+
+<div class="button-row">
+  <button *ngIf="step > 1 && step <= 8" class="btn btn-primary btn-prev" (click)="clickPrev()">Previous</button>
+  <button *ngIf="step < 7" class="btn btn-primary btn-next" (click)="clickNext()">Next</button>
+  <button *ngIf="step == 7" class="btn btn-primary btn-next" (click)="clickCreate()">Create</button>
+</div>

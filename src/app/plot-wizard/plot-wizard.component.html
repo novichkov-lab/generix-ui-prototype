@@ -1,0 +1,10 @@
+<app-plot-wizstep-select-brick *ngIf="step == 1" [plotBuilder]="plotBuilder" ></app-plot-wizstep-select-brick>
+<app-plot-wizstep-result *ngIf="graphData != null" [graphData]="graphData" ></app-plot-wizstep-result>
+
+<div class="button-row">
+  <button *ngIf="step > 1 " class="btn btn-primary btn-prev" (click)="clickPrev()">Previous</button>
+  <!-- <button *ngIf="step < 2" class="btn btn-primary btn-next" (click)="clickNext()">Next</button> -->
+  <button *ngIf="step == 1" class="btn btn-primary btn-next" (click)="clickPlot()">Plot</button>
+</div>
+
+

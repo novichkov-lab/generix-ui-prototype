@@ -1,0 +1,31 @@
+<div class="header">
+    <h3>Let's check how the data is uploaded</h3>
+</div>
+
+<br>
+
+<div *ngFor="let dim of brick.dimensions">
+
+    <div class="form-horizontal panel panel-default">
+        <div class="panel-heading" style="padding-top:5px; padding-bottom:5px">
+          <div class="row">
+            <div class="col-sm-10">
+              Dimension {{dim.index + 1}}: {{ dim.type.name }} (size = {{dim.size()}})
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+            <div *ngFor="let dimVar of dim.variables">
+                <div clas="row">
+                    <div class="col-sm-3" style="text-align:left">{{dimVar.type.name}}:</div>
+                    <div class="col-sm-9">{{dimVar.valuesSample}}</div>
+                </div>
+            </div>
+      
+        </div>
+    </div>
+    <br>
+
+</div>
+
+<br>

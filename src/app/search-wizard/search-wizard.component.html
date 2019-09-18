@@ -1,0 +1,13 @@
+<app-search-wizstep-type *ngIf="step == 1" [searchBuilder]="searchBuilder" ></app-search-wizstep-type>
+<app-search-wizstep-criteria *ngIf="step == 2" [searchBuilder]="searchBuilder" ></app-search-wizstep-criteria>
+<app-search-wizstep-result *ngIf="searchResult != null" [searchResult]="searchResult" ></app-search-wizstep-result>
+
+
+
+
+
+<div class="button-row">
+  <button *ngIf="step > 1 " class="btn btn-primary btn-prev" (click)="clickPrev()">Previous</button>
+  <button *ngIf="step < 2" class="btn btn-primary btn-next" (click)="clickNext()">Next</button>
+  <button *ngIf="step == 2" class="btn btn-primary btn-next" (click)="clickSearch()">Search</button>
+</div>

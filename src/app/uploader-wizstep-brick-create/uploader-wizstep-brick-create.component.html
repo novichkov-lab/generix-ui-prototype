@@ -1,0 +1,35 @@
+<div class="header">
+    <h3>We are ready to create a new Data Brick</h3>
+</div>
+  
+<div class="jumbotron">
+    <h4>Data Brick configuration</h4>
+    <div>Properties:</div>
+    <ul>
+        <li *ngFor="let prop of brick.properties">{{prop.type.name}}: {{prop.value}}</li>
+    </ul>
+    <br>
+
+    <div>Dimensions:</div>
+    <ul>
+        <li *ngFor="let dim of brick.dimensions">{{dim.type.name}} (size = {{dim.size()}})
+          <ul>
+            <li *ngFor="let dimVar of dim.variables"> {{dimVar.type.name}}: {{dimVar.valuesSample}} </li>
+          </ul>
+          <br>
+        </li>
+    </ul>
+
+    <br>
+    <div *ngIf="brick.isStatusCreating()"><i><b> --- Creating... --- </b></i></div>
+
+  </div>
+
+<div clas="form-group ">
+    <label class="control-label col-sm-1">Name</label>
+    <div class="input-group" col-sm-11 style="width:90%">      
+        <input [(ngModel)]="brick.name" type="text" class="form-control" />
+    </div>
+</div>
+
+<br>

@@ -1,0 +1,174 @@
+<div class="header">
+    <h3>Let's constrain the search criteria</h3>
+</div>
+<div class="header" style="color:darkslategrey">
+    <h4>
+    you want to find {{searchBuilder.dataType}}(s) that...
+    </h4>
+</div>
+
+<div *ngIf="loaded">
+    <h4>Has properties</h4>
+    <table class="table table-condensed">
+        <thead>
+          <tr>
+            <td width='40%'> Property</td>
+            <td width='10%'></td>
+            <td >Value</td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let criterion of searchBuilder.criteriaHas">
+            <td width='40%'>
+
+                <select2 
+                [options]="props"
+                [(ngModel)]="criterion.property">
+              </select2>
+
+            </td>
+            <td width='10%'>
+                <select2 
+                [options]="operations"
+                [(ngModel)]="criterion.operation">
+              </select2>
+
+            </td>
+            <td><input [(ngModel)]="criterion.value" type="text" class="form-control" /></td>
+            <td><button (click)="deleteCriterionHas(criterion)" class="btn">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+              </button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="row-add-property">
+        <button (click)="addCriterionHas()" class="btn btn-default">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          Add criterion</button>
+      </div>    
+
+      <h4>Produced by Process</h4>
+      <table class="table table-condensed">
+          <thead>
+            <tr>
+              <td width='40%'> Property</td>
+              <td width='10%'></td>
+              <td >Value</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let criterion of searchBuilder.criteriaProcessOutput">
+              <td width='40%'>
+  
+                  <select2 
+                  [options]="processOutputPorops"
+                  [(ngModel)]="criterion.property">
+                </select2>
+  
+              </td>
+              <td width='10%'>
+                  <select2 
+                  [options]="operations"
+                  [(ngModel)]="criterion.operation">
+                </select2>
+  
+              </td>
+              <td><input [(ngModel)]="criterion.value" type="text" class="form-control" /></td>
+              <td><button (click)="deleteCriterionHas(criterion)" class="btn">
+                  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row-add-property">
+          <button (click)="addCriterionProcessOutput()" class="btn btn-default">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            Add criterion</button>
+        </div>         
+
+        <h4>Linked UP to</h4>
+        <table class="table table-condensed">
+            <thead>
+              <tr>
+                <td width='40%'> Property</td>
+                <td width='10%'></td>
+                <td >Value</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let criterion of searchBuilder.criteriaLinkedUp">
+                <td width='40%'>
+    
+                    <select2 
+                    [options]="processOutputPorops"
+                    [(ngModel)]="criterion.property">
+                  </select2>
+    
+                </td>
+                <td width='10%'>
+                    <select2 
+                    [options]="operations"
+                    [(ngModel)]="criterion.operation">
+                  </select2>
+    
+                </td>
+                <td><input [(ngModel)]="criterion.value" type="text" class="form-control" /></td>
+                <td><button (click)="deleteCriterionHas(criterion)" class="btn">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                  </button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="row-add-property">
+            <button (click)="addCriterionProcessOutput()" class="btn btn-default">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              Add criterion</button>
+          </div>         
+  
+          <h4>Linked DOWN to</h4>
+          <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <td width='40%'> Property</td>
+                  <td width='10%'></td>
+                  <td >Value</td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let criterion of searchBuilder.criteriaLinkedDown">
+                  <td width='40%'>
+      
+                      <select2 
+                      [options]="processOutputPorops"
+                      [(ngModel)]="criterion.property">
+                    </select2>
+      
+                  </td>
+                  <td width='10%'>
+                      <select2 
+                      [options]="operations"
+                      [(ngModel)]="criterion.operation">
+                    </select2>
+      
+                  </td>
+                  <td><input [(ngModel)]="criterion.value" type="text" class="form-control" /></td>
+                  <td><button (click)="deleteCriterionHas(criterion)" class="btn">
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="row-add-property">
+              <button (click)="addCriterionProcessOutput()" class="btn btn-default">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                Add criterion</button>
+            </div>         
+  
+</div>
+
+
+<br>

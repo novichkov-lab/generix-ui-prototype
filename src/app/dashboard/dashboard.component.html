@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let report of reports" > <a href="#" (click)="showReport(report)">{{report}}</a> </li>
+</ul>
+
+<app-search-wizstep-result *ngIf="searchResult != null" [searchResult]="searchResult" ></app-search-wizstep-result>

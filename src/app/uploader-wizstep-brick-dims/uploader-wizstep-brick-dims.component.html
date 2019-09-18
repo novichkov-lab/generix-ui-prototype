@@ -1,0 +1,12 @@
+<div class="header">
+  <h3>Let's define the structure of the Data Brick</h3>
+</div>
+
+<div *ngFor="let dim of brick.dimensions">
+  <app-brick-dimension [brickDimension]="dim"></app-brick-dimension>
+</div>
+<div class="row-add-dimension">
+  <button (click)="addDimension()" class="btn btn-default">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    Add dimension</button>
+</div>

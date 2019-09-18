@@ -1,0 +1,90 @@
+  <div class="header">
+      <h3>We are ready to upload the Brick's data</h3>
+  </div>
+
+  <!-- <div class="input-group">
+      <input type="text" class="form-control" placeholder="brick_data.csv" aria-describedby="basic-addon2">
+      <span class="input-group-addon" id="basic-addon2">Select file</span>
+  </div> -->
+
+  <!-- <input  
+    type="file" class="form-control" name="documents" 
+    (change)="onChange($event)" 
+    [(ngModel)]="documents" 
+    #myDocuments="ngModel"
+    >
+    <br> -->
+
+    <div id="upload-missingattachments-container" class="content-container upload-content-container">
+        <div class="filter-container">
+    
+
+
+		<div class="row">
+        <div class="col-md-12 filter-container-row filter-container-row-top">
+          <div class="drag-drop-panel  col-md-12">
+            <div class="drop-zone upload-drop-zone col-md-12">
+              <div class="drop-zone-target col-md-12">
+                <div class="col-md-12">
+                  <div class="drag-drop-content"> 
+                    <div class="row drag-drop-image-row">
+                      <div class="drag-drop-image-container">
+                        <div class="drag-drop-title-image">
+                          <a href="#"><span class="glyphicon glyphicon-cloud-upload"></span></a>
+                        </div>										
+                      </div>																	
+                    </div>
+                  </div>
+                </div>					
+                <div class="col-md-12">
+                  <div class="drag-drop-title">Drag & Drop Files</div>
+                </div>
+                <div class="col-md-12">
+                  <div class="drag-drop-subtitle">
+                    <label class="drag-drop-upload-file-input-label" for="upload-attachment-file-input">
+                      or Click Here 
+                      <input (change)="onFileSelect($event)"  type="file" id="upload-attachment-file-input" multiple style="display: none;">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div  *ngIf="file"  class="row files-to-display-content">
+          <div class="col-md-12 filter-container-row filter-container-row-bottom">
+            <div class="row">
+              <div class="col-md-10">
+                <div class="text-left">
+                  <h4>
+                      <span class="glyphicon glyphicon-file glyphicon-blue"></span>
+                      <span>{{file[0].name}}</span>
+                  </h4>
+                </div>
+              </div>
+              <div class="col-md-2">
+                  <div class="upload-button-row button-row text-right">
+                      <button (click)="onStartUpload()"  id="upload-attachments-global-btn" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-open"></span>UPLOAD</button>
+                    </div>        
+              </div>
+            </div>
+          </div>
+        </div>
+    
+
+      </div>
+    </div>
+
+    <div *ngIf="debug" class="panel panel-success">
+        <br>
+        <div class="panel-heading">Debug</div>  
+        <div class="panel-body">
+            {{uploadedDoc}}
+          </div>
+    </div>
+  
+  <br>
+
+  

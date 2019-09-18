@@ -1,0 +1,81 @@
+<div class="header">
+    <h3>We do not want the data to be isolated.</h3>
+</div>
+<div class="header" style="color:crimson">
+    <h5>
+    <b>Let's connect it to ENIGMA Core Data...</b>
+    </h5>
+</div>
+
+
+<br>
+
+<div  *ngIf="loaded">
+    <div *ngFor="let dim of brick.dimensions">
+
+        <div class="form-horizontal panel panel-default">
+            <div class="panel-heading" style="padding-top:5px; padding-bottom:5px">
+              <div class="row">
+                <div class="col-sm-10">
+                  Dimension {{dim.index + 1}}: {{ dim.type.name }} (size = {{dim.size()}})
+                </div>
+              </div>
+            </div>
+            <div class="panel-body">
+                <div clas="row">
+                    <div class="col-sm-3">
+                      <span style="text-align:left">Dimension variable</span>
+                    </div>
+                    <div class="col-sm-3">
+                        <span style="text-align:left">Core type</span>
+                    </div>
+                    <div class="col-sm-3">
+                        <span style="text-align:left">Core type property</span>
+                    </div>
+                    <div class="col-sm-3">
+                      <span></span>
+                    </div>
+                </div>
+                <hr>
+                <div clas="row" *ngFor="let dimVar of dim.variables">
+                    <div *ngIf="!(dimVar.mapPK)">
+                      <div class="col-sm-3">
+                        <input [(ngModel)]="dimVar.type.name" type="text" class="form-control" />
+                      </div>
+                      <div class="col-sm-3">
+    
+                          <select2 
+                            [options]="coreTypes"
+                            [(ngModel)]="dimVar.mapCoreType" 
+                            (onSelect)="onCoreTypeSelect($event, dimVar)">
+                          </select2>
+    
+    
+                          <!-- <app-select-search [term]='dimVar.mapCoreType'  [searchMethod]='"searchOntAll"'></app-select-search>                       -->
+                      </div>
+                      <div class="col-sm-3">
+                          <select2 
+                            [options]="coreProps.get(dimVar.mapCoreType)"
+                            [(ngModel)]="dimVar.mapCoreProp" 
+                            (onSelect)="onCorePropSelect($event, dimVar)">
+                          </select2>
+    
+                          <!-- <app-select-search [term]='dimVar.mapCoreProp'  [searchMethod]='"searchOntAll"'></app-select-search>                       -->
+                      </div>
+                      <div class="col-sm-3">
+                          <button class="btn btn-default" (click)="onClickMap($event, dimVar)">Map</button>                
+                      </div>
+                      <div *ngIf="dimVar.mapped">
+                          Mapped: {{dimVar.mappedCount}} out of {{dimVar.totalCount}}!
+                      </div>
+                    </div>
+                </div>      
+            </div>
+        </div>
+        <br>
+    
+    </div>
+    
+</div>
+
+<br>

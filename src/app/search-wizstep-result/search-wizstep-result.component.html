@@ -1,0 +1,16 @@
+
+<h4>{{searchResult.searchBuilder.dataType}}(s):</h4>
+
+<table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+          <td  style="background-color:darkseagreen; font-weight: bold" *ngFor="let column of searchResult.columns">{{column}}</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of searchResult.data">
+          <td *ngFor="let column of searchResult.columns">{{row[column]}}</td>
+      </tr>    
+    </tbody>
+  </table>
+

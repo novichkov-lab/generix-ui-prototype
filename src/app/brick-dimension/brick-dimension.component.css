@@ -1,0 +1,19 @@
+.row-delete {
+  text-align: right;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.panel-dimension {
+  /* background: #fafffa; */
+  background: #ffffff;
+}
+
+.row-add-dimension-var {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.btn-delete {
+  padding: 0px;
+}

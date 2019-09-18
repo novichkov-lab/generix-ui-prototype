@@ -1,0 +1,35 @@
+<div class="form-horizontal panel" style="margin-top:30px">
+  <div class="header">
+    <h3>Please tell us about general properties of your Data Brick</h3>
+  </div>
+  
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <td width='50%'>Property</td>
+        <td>Value</td>
+        <td width='20%'>Units</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prop of brick.properties">
+        <td width='50%'>
+            <app-select-search [term]='prop.type'  [searchMethod]='"searchOntAll"'></app-select-search>
+        </td>
+        <td><input [(ngModel)]="prop.value" type="text" class="form-control" /></td>
+        <td width='20%'>
+            <app-select-search [term]='prop.units'  [searchMethod]='"searchOntUnits"'></app-select-search>
+        </td>
+        <td><button (click)="deleteProperty(prop)" class="btn">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row-add-property">
+    <button (click)="addProperty()" class="btn btn-default">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      Add property</button>
+  </div>
+</div>

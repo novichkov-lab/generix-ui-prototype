@@ -1,0 +1,8 @@
+<tr>
+  <td><input [(ngModel)]="typedProperty.type" type="text" class="form-control" /></td>
+  <td><input [(ngModel)]="typedProperty.value" type="text" class="form-control" /></td>
+  <td><input [(ngModel)]="typedProperty.units" type="text" class="form-control" /></td>
+  <td><button (click)="deleteProperty()" class="btn">
+      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </button></td>
+</tr>

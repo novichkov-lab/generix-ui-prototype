@@ -1,0 +1,17 @@
+<div class="form-horizontal panel" style="margin-top:30px">
+  <div class="header">
+    <h3>What is your Data Brick about?</h3>
+  </div>
+  <select2 
+    [options]="options" 
+    [(ngModel)]="brick.template_id" 
+    (onSelect)="onTemplateSelect($event)"></select2>
+
+</div>
+
+<div *ngIf="debug" class="panel panel-success">
+    <div class="panel-heading">Debug</div>  
+    <div class="panel-body">
+        {{templateDoc}}
+      </div>
+</div>
